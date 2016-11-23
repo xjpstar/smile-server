@@ -1,0 +1,37 @@
+{
+  "name": "smile",
+  "version": "0.0.1",
+  "description": "smile server",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test/",
+    "startproxy": "sudo node proxy.js",
+    "start": "npm run cpstatic && forever start server.js --env=production",
+    "stop": "forever stop server.js",
+    "dev": "node server.js --env=dev",
+    "cpstatic": "cp -r ./static ./assets"
+  },
+  "keywords": [
+    "koa",
+    "smile"
+  ],
+  "author": "xjp.star@gmail.com",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "copyfiles": "^1.0.0",
+    "forever": "^0.15.2",
+    "http": "0.0.0",
+    "images": "^3.0.0",
+    "koa": "^1.2.1",
+    "koa-send": "^3.2.0",
+    "koa-ssl": "^2.0.0",
+    "md5": "^2.1.0",
+    "minimist": "^1.2.0",
+    "mongodb": "^2.2.5"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "http-proxy": "^1.14.0",
+    "mocha": "^2.5.3"
+  }
+}
